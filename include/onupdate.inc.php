@@ -29,7 +29,7 @@ define('NEWS_DB_VERSION', 1);
  * Updates news module
  *
  * @param object $module
- * @return bool 
+ * @return bool
  */
 
 function icms_module_update_news($module) {
@@ -39,14 +39,14 @@ function icms_module_update_news($module) {
 /**
  * Conducts optional tasks on news module installation or update
  *
- * Checks that an upload directory is available (creates one if necessary) and authorises the 
+ * Checks that an upload directory is available (creates one if necessary) and authorises the
  * module to use common image mimetypes that will probably be required.
  *
  * @param object $module
  * @return boolean
  */
 function icms_module_install_news($module) {
-	
+
 	// create an uploads directory for images
 	$path = ICMS_ROOT_PATH . '/uploads/' . basename(dirname(dirname(__FILE__)));
 	$directory_exists = $file_exists = $writeable = TRUE;
@@ -55,10 +55,10 @@ function icms_module_install_news($module) {
 	if (!is_dir($path)) {
 		$directory_exists = mkdir($path, 0777);
 		$path .= '/index.html';
-		
+
 		// add an index file to prevent index lookups
 		if (!is_file($path)) {
-			$filename = $path;	
+			$filename = $path;
 			$contents = '<script>history.go(-1);</script>';
 			$handle = fopen($filename, 'wb');
 			$result = fwrite($handle, $contents);

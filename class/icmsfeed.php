@@ -38,7 +38,7 @@ class IcmsFeed {
 	/**
 	 * Constructor
 	 */
-	public function IcmsFeed () {
+	public function __construct () {
 		global $icmsConfig;
 		$this->title = $icmsConfig['sitename'];
 		$this->url = ICMS_URL;
@@ -88,7 +88,7 @@ class IcmsFeed {
 	 * Renders the RSS feed
 	 */
 	public function render() {
-		
+
 		icms::$logger->disableLogger();
 
 		header('Content-Type: application/rss+xml; charset='._CHARSET);
