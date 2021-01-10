@@ -19,7 +19,7 @@ $modversion = array(
   'name'=> _MI_NEWS_MD_NAME,
   'version'=> "1.18",
   'description'=> _MI_NEWS_MD_DESC,
-  'author'=> "Madfish (Simon Wilkinson)", "fiammybe (David Janssens)"
+  'author'=> "Madfish (Simon Wilkinson) & fiammybe (David Janssens)",
   'credits'=> "Functionality is based on the legacy News module, but this is a clean rewrite in IPF.",
   'help'=> "",
   'license'=> "GNU General Public License (GPL)",
@@ -128,7 +128,7 @@ $modversion['templates'][] = array(
 
 /** Preferences information */
 
-$topic_image_default_options = array('0' => '_MI_NEWS_ARTICLE_NO', '1' => '_MI_NEWS_ARTICLE_LEFT', 
+$topic_image_default_options = array('0' => '_MI_NEWS_ARTICLE_NO', '1' => '_MI_NEWS_ARTICLE_LEFT',
 	'2' => '_MI_NEWS_ARTICLE_RIGHT');
 $topic_image_default_options = array_flip($topic_image_default_options);
 
